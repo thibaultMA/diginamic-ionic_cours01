@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cources</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset="true">
+    <ion-item *ngFor="let item of data">
+      <ion-label>
+        <h4>{{item}}</h4>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <a routerLink="/">vers home</a>
+  <button (click)="alerte()">ALARME !</button>
+</ion-content>

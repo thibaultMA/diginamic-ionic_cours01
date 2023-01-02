@@ -38,8 +38,18 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'cources',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../cources/cources.module').then(m => m.CourcesPageModule)
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/cources',
         pathMatch: 'full'
       }
     ]
